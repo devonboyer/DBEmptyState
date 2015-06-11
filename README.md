@@ -35,7 +35,7 @@ For a UICollectionView:
 
 ### Displaying the Empty State
 
-DBEmptyState contains categories that dynamically shows an empty view when there are no entries in your table view or collection view. The empty view will be displayed whenever the table view has no cells in any section. Whenever the table view is reloaded or layed out the empty view gets updated. The frame of the empty view is updated to the bounds of the table view, so make sure it layouts nicely for all the orientations and screen sizes.
+DBEmptyState contains categories that dynamically shows an empty view when there are no entries in your table view or collection view. The empty view will be displayed whenever the table view has no cells in any section. Whenever the table view is reloaded or layed out the empty view gets updated. The frame of the empty view is updated to the bounds of the table view, to make sure it correctly adpats for all orientations and screen sizes.
 
 There might be scenarios in which you don't want the empty view to appear. For example when the content of the list has not yet been loaded and you don't want to tell at the user that there's none just because it has not yet been loaded.
 
