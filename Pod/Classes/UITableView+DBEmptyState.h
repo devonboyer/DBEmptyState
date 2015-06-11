@@ -14,6 +14,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DBTableViewDelegateEmptyView <UITableViewDelegate>
+
+@optional
+
+- (BOOL)tableViewShouldDisplayEmptyView:(UITableView *)tableView;
+
+@end
+
 @interface UITableView (DBEmptyState)
 
 @property (nonatomic, strong) UIView *emptyView;

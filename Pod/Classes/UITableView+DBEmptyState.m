@@ -74,7 +74,13 @@
         numberOfItems += [self numberOfRowsInSection:sectionIndex];
     }
     
-    emptyView.hidden = (numberOfItems > 0);
+    // Check bypassing
+    BOOL shouldDisplayEmptyView;
+    if ([self.delegate respondsToSelector:@selector(tableViewShouldDisplayEmptyView:)]) {
+        shouldDisplayEmptyView = [(id<DBTableViewDelegateEmptyView>)self.delegate tableViewShouldDisplayEmptyView:self];
+    }
+    
+    emptyView.hidden = (numberOfItems > 0 && shouldDisplayEmptyView);
 }
 
 #pragma mark - Swizzle

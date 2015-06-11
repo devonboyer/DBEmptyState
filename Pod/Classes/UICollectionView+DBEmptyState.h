@@ -14,6 +14,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DBCollectionViewDelegateEmptyView <UICollectionViewDelegate>
+
+@optional
+
+- (BOOL)collectionViewShouldDisplayEmptyView:(UICollectionView *)collectionView;
+
+@end
+
 @interface UICollectionView (DBEmptyState)
 
 @property (nonatomic, strong) UIView *emptyView;

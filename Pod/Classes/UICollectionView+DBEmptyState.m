@@ -74,6 +74,12 @@
         numberOfItems += [self numberOfItemsInSection:sectionIndex];
     }
     
+    // Check bypassing
+    BOOL shouldDisplayEmptyView;
+    if ([self.delegate respondsToSelector:@selector(collectionViewShouldDisplayEmptyView:)]) {
+        shouldDisplayEmptyView = [(id<DBCollectionViewDelegateEmptyView>)self.delegate collectionViewShouldDisplayEmptyView:self];
+    }
+    
     emptyView.hidden = (numberOfItems > 0);
 }
 
