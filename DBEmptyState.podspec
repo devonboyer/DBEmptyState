@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "DBEmptyState"
-  s.version          = "0.1.0"
+  s.version          = "1.0.0"
   s.summary          = "Empty state management for UITableView and UICollectionView."
   s.license          = "MIT"
   s.platform         = :ios, '7.0'
