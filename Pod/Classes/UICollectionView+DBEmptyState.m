@@ -80,7 +80,7 @@
         shouldDisplayEmptyView = [(id<DBCollectionViewDelegateEmptyView>)self.delegate collectionViewShouldDisplayEmptyView:self];
     }
     
-    emptyView.hidden = (numberOfItems > 0);
+    emptyView.hidden = (numberOfItems > 0 || !shouldDisplayEmptyView);
 }
 
 #pragma mark - Swizzle

@@ -80,7 +80,7 @@
         shouldDisplayEmptyView = [(id<DBTableViewDelegateEmptyView>)self.delegate tableViewShouldDisplayEmptyView:self];
     }
     
-    emptyView.hidden = (numberOfItems > 0 && shouldDisplayEmptyView);
+    emptyView.hidden = (numberOfItems > 0 || !shouldDisplayEmptyView);
 }
 
 #pragma mark - Swizzle
