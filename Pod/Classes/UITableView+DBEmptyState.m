@@ -75,7 +75,7 @@
     }
     
     // Check bypassing
-    BOOL shouldDisplayEmptyView;
+    BOOL shouldDisplayEmptyView = YES;
     if ([self.delegate respondsToSelector:@selector(tableViewShouldDisplayEmptyView:)]) {
         shouldDisplayEmptyView = [(id<DBTableViewDelegateEmptyView>)self.delegate tableViewShouldDisplayEmptyView:self];
     }

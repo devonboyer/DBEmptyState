@@ -75,7 +75,7 @@
     }
     
     // Check bypassing
-    BOOL shouldDisplayEmptyView;
+    BOOL shouldDisplayEmptyView = YES;
     if ([self.delegate respondsToSelector:@selector(collectionViewShouldDisplayEmptyView:)]) {
         shouldDisplayEmptyView = [(id<DBCollectionViewDelegateEmptyView>)self.delegate collectionViewShouldDisplayEmptyView:self];
     }
